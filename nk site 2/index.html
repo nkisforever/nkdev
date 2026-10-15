@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nk7 Dev v2.0 </title> 
+<meta name="description" content="nxght.exe — developer full stack. bots, automações, APIs e ferramentas sob demanda.">
+<meta name="author" content="nk.exe">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nxght Dev v2.0">
+<meta property="og:description" content="nxght.exe — developer full stack. bots, automações, APIs e ferramentas sob demanda.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nxght Dev v2.0">
+<meta name="twitter:description" content="nxght.exe — developer full stack. bots, automações, APIs e ferramentas sob demanda.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{background:'rgb(var(--background) / <alpha-value>)',foreground:'rgb(var(--foreground) / <alpha-value>)','muted-foreground':'rgb(var(--muted) / <alpha-value>)'}}}}</script>
+<link rel="stylesheet" href="style.css">
+</head><link rel="icon" type="image/gif" href="meu.giff.png">
+<body>
+<div class="min-h-screen relative">
+<canvas id="bg" class="fixed inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index:0;opacity:.55"></canvas>
+
+<aside class="fixed left-0 top-0 h-screen w-16 md:w-20 z-40 flex flex-col items-center justify-between py-6 glass-strong border-r border-foreground/10">
+<div class="text-mono text-foreground font-bold text-sm select-none flex flex-col items-center leading-tight"><span class="text-glow">Nk7</span><span class="text-muted-foreground text-[10px]">&lt;/&gt;</span></div>
+<nav id="nav" class="flex flex-col gap-1"></nav>
+<div class="w-12 h-12" aria-hidden="true"></div>
+</aside>
+
+<button id="sb" aria-label="rolar para baixo" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-1 text-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground hover:text-foreground transition-all duration-300 opacity-80"><span>scroll</span><i data-ic="chevron-down" data-c="w-5 h-5 animate-bounce"></i></button>
+
+<main class="relative z-10 pl-16 md:pl-20">
+<div class="px-4 md:px-10 pt-10 max-w-6xl mx-auto pb-32">
+
+<section id="home" class="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
+<div class="order-2 lg:order-1">
+<p class="text-xs text-mono text-muted-foreground uppercase tracking-[0.3em]">// terminal v1.0</p>
+<h1 data-text="nk7.exe" class="font-display text-5xl md:text-7xl font-bold mt-4 leading-none"><span><span id="typed">eu sou nk7</span><span class="inline-block w-[0.6ch] -mb-1 ml-1 bg-foreground animate-blink" style="height:1em"></span></span></h1>
+<p class="text-muted-foreground mt-4 max-w-md text-mono text-sm leading-relaxed">[systems online] · construindo ferramentas, redes e ideias.<span class="block mt-1 text-foreground/60">// DEVELOPER FULL STACK</span></p>
+</div>
+<div class="order-1 lg:order-2 flex justify-center">
+<div class="relative mx-auto" style="width:220px;height:220px">
+<div id="tags" class="absolute inset-0 z-0 pointer-events-none overflow-visible"></div>
+<div id="ring" class="relative z-10 w-full h-full rounded-full overflow-hidden animate-pulse-ring"><img id="av1" alt="nxght avatar" class="w-full h-full object-cover"></div>
+<span id="dot1" class="absolute z-20 bottom-3 right-3 w-6 h-6 rounded-full border-4 border-background"></span>
+</div>
+</div>
+</section>
+
+<div class="space-y-24 md:space-y-32">
+
+<section id="profile" class="space-y-6 scroll-mt-24 min-h-[10vh]">
+<div><p class="text-xs text-mono text-muted-foreground uppercase tracking-[0.3em]">// node 01</p><h2 data-text="perfil" class="font-display text-3xl md:text-4xl font-semibold mt-1">perfil</h2></div>
+<div class="grid md:grid-cols-2 gap-6 items-start">
+<div class="space-y-4">
+<div class="glass-strong rounded-2xl p-5 w-full max-w-sm relative overflow-hidden">
+<div class="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-foreground/5 blur-2xl"></div>
+<div class="flex items-start gap-4 relative">
+<div class="relative shrink-0"><img id="av2" alt="avatar" class="w-16 h-16 rounded-full object-cover border border-foreground/20"><span id="dot2" class="absolute bottom-0 right-0 w-4 h-4 rounded-full border-2 border-background"></span></div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 flex-wrap"><h3 id="name" class="text-lg font-semibold text-foreground truncate"></h3><div id="badges" class="flex items-center gap-1.5 px-2 py-1 rounded-lg  shrink-0"></div></div>
+<p id="uname" class="text-xs text-muted-foreground text-mono"></p>
+<p class="text-xs mt-1 text-muted-foreground flex items-center gap-1.5"><span id="dot3" class="inline-block w-1.5 h-1.5 rounded-full"></span><span id="stxt"></span></p>
+</div>
+</div>
+<div id="acts" class="mt-4 space-y-2"></div>
+</div>
+<div class="grid grid-cols-2 gap-3 w-full max-w-sm">
+<a id="gh" href="#" target="_blank" rel="noopener noreferrer" class="glass rounded-xl px-4 py-3 flex items-center gap-3 hover:bg-foreground/10 transition-all hover:translate-y-[-2px] group"><i data-ic="github" data-c="w-5 h-5 shrink-0"></i><div class="text-left min-w-0"><div class="text-[10px] text-muted-foreground uppercase tracking-wider">github</div><div id="ght" class="text-sm text-mono truncate"></div></div></a>
+<a id="dc" href="#" target="_blank" rel="noopener noreferrer" class="glass rounded-xl px-4 py-3 flex items-center gap-3 hover:bg-foreground/10 transition-all hover:translate-y-[-2px] group"><i data-ic="discord" data-c="w-5 h-5 shrink-0"></i><div class="text-left min-w-0"><div class="text-[10px] text-muted-foreground uppercase tracking-wider">discord</div><div id="dct" class="text-sm text-mono truncate"></div></div></a>
+</div>
+</div>
+<div class="glass rounded-2xl p-6">
+<p class="text-xs text-mono text-muted-foreground uppercase tracking-wider">// about</p>
+<p class="mt-3 text-sm leading-relaxed text-foreground/85">Olá, sou um developer full stack. Crio soluções sob demanda — bots para Discord, selfbots, automações, APIs, sites e ferramentas customizadas. Foco em entregar projetos limpos, performáticos e prontos para escalar conforme a necessidade do cliente.</p>
+<div class="grid grid-cols-3 gap-3 mt-5">
+<div class="rounded-lg bg-foreground/5 border border-foreground/10 p-3 text-center"><div class="text-2xl font-display font-bold tabular-nums" data-n="14">8</div><div class="text-[10px] uppercase tracking-wider text-muted-foreground text-mono">projetos</div></div>
+<div class="rounded-lg bg-foreground/5 border border-foreground/10 p-3 text-center"><div class="text-2xl font-display font-bold tabular-nums" data-n="380">320</div><div class="text-[10px] uppercase tracking-wider text-muted-foreground text-mono">commits/mês</div></div>
+<div class="rounded-lg bg-foreground/5 border border-foreground/10 p-3 text-center"><div class="text-2xl font-display font-bold tabular-nums">∞</div><div class="text-[10px] uppercase tracking-wider text-muted-foreground text-mono">cafés/dia</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="projects" class="space-y-6 scroll-mt-24 min-h-[80vh]">
+<div><p class="text-xs text-mono text-muted-foreground uppercase tracking-[0.3em]"></p><h2 data-text="projetos" class="font-display text-3xl md:text-4xl font-semibold mt-1">projetos</h2></div>
+<div class="relative">
+<div id="vp" class="overflow-hidden" style="touch-action:pan-y"><div id="track" class="flex gap-5" style="transition:transform .5s cubic-bezier(.22,1,.36,1)"></div></div>
+<div class="flex items-center justify-between mt-6">
+<div id="dots" class="flex gap-1.5"></div>
+<div class="flex gap-2">
+<button id="prev" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-foreground/10"><i data-ic="chevron-left" data-c="w-4 h-4"></i></button>
+<button id="next" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-foreground/10"><i data-ic="chevron-right" data-c="w-4 h-4"></i></button>
+</div>
+</div>
+</div>
+</section>
+
+<section id="weather" class="space-y-6 scroll-mt-24 min-h-[80vh]">
+<div><p class="text-xs text-mono text-muted-foreground uppercase tracking-[0.3em]">// node 02</p><h2 id="wtitle" data-text="clima · goiânia" class="font-display text-3xl md:text-4xl font-semibold mt-1">clima · goiânia</h2></div>
+<div class="glass rounded-2xl p-6">
+<div class="flex items-start justify-between gap-4 flex-wrap">
+<div>
+<div id="wplace" class="text-xs text-mono text-muted-foreground uppercase tracking-wider"></div>
+<div id="clock" class="text-5xl md:text-6xl text-mono mt-2 tabular-nums text-glow">--:--:--</div>
+<div id="date" class="text-xs text-muted-foreground mt-1 capitalize"></div>
+</div>
+<div class="flex items-center gap-4">
+<span id="wicon"></span>
+<div><div id="wtemp" class="text-5xl font-display font-light tabular-nums">--°</div><div id="wdesc" class="text-xs text-muted-foreground"></div></div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-3 mt-6">
+<div class="rounded-lg bg-foreground/5 border border-foreground/10 p-3 flex items-center gap-2.5"><i data-ic="droplets" data-c="w-4 h-4 text-foreground/70"></i><div><div class="text-[10px] text-muted-foreground uppercase">umidade</div><div id="whum" class="text-sm text-mono">--</div></div></div>
+<div class="rounded-lg bg-foreground/5 border border-foreground/10 p-3 flex items-center gap-2.5"><i data-ic="cloud-rain" data-c="w-4 h-4 text-foreground/70"></i><div><div class="text-[10px] text-muted-foreground uppercase">chuva</div><div id="wrain" class="text-sm text-mono">--</div></div></div>
+<div class="rounded-lg bg-foreground/5 border border-foreground/10 p-3 flex items-center gap-2.5"><i data-ic="wind" data-c="w-4 h-4 text-foreground/70"></i><div><div class="text-[10px] text-muted-foreground uppercase">vento</div><div id="wwind" class="text-sm text-mono">--</div></div></div>
+</div>
+<div id="fc" class="grid grid-cols-7 gap-2 mt-6 pt-2"></div>
+</div>
+</section>
+
+</div>
+<footer class="mt-24 pt-10 border-t border-foreground/10 text-mono text-xs text-muted-foreground flex justify-between flex-wrap gap-2"><span>// nk7 © 2026</span><span class="flex items-center gap-2">I love kamily<img src="meu.gif" alt="" class="w-5 h-5 object-contain shrink-0"></span><span>build xx819q · all systems nominal</span></footer>
+</div>
+</main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
